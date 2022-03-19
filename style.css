@@ -8,6 +8,25 @@ body{
   margin: 0;
 }
 
+header {
+  position: absolute; 
+  top: 0; 
+  width: 100%;
+  padding-top: 5%;
+}
+
+main {
+  padding-top: 10%;
+  height: 100%; 
+  width: 100%;
+}
+
+footer {
+  position: absolute; 
+  bottom: 0;  
+  width: 100%;
+}
+
 .centre {
   margin: auto;
   text-align: center;
@@ -77,22 +96,7 @@ a:not(:hover) {
   transition: 0.5s;
 }
 
-header {
-  position: absolute; 
-  top: 0; 
-  width: 100%;
-}
 
-main {
-  height: 100%; 
-  width: 100%;
-}
-
-footer {
-  position: absolute; 
-  bottom: 0;  
-  width: 100%;
-}
 
 
 

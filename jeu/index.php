@@ -29,9 +29,18 @@
     <title>TauntiO</title>
 </head>
 <body>
+  <header>
     <button class="button" onclick="window.location.href = '../index.html';"><span>Accueil</span></button>
+  </header>
+  <main>
     <button class="button" onclick="window.location.href = 'index.php';"><span>Changer</span></button>
     <audio controls src="<?php echo($voiceline); ?>">Audio aléatoire</audio>
+  </main>
+  <footer class="centre">
+        <a href="https://www.instagram.com/brr.titouan">Insta</a>
+        <a href="https://twitter.com/TauntiO">Twitter</a>
+        <a href="https://github.com/TauntiiO">GitHub</a>
+    </footer>
 </body>
 </body>
 </html>
