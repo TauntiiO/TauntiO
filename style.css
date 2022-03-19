@@ -1,5 +1,11 @@
 body{
   background-color: #444444;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .centre {
@@ -70,9 +76,23 @@ a:not(:hover) {
   font-size: 1.5rem;
   transition: 0.5s;
 }
-  
 
+header {
+  position: absolute; 
+  top: 0; 
+  width: 100%;
+}
 
+main {
+  height: 100%; 
+  width: 100%;
+}
+
+footer {
+  position: absolute; 
+  bottom: 0;  
+  width: 100%;
+}
 
 
 
