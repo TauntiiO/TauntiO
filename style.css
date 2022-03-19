@@ -12,13 +12,13 @@ header {
   position: absolute; 
   top: 0; 
   width: 100%;
-  padding-top: 5%;
+  padding-top: 10px;
 }
 
 main {
-  padding-top: 10%;
   height: 100%; 
   width: 100%;
+  padding-top: 100px;
 }
 
 footer {
