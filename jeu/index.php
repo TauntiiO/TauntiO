@@ -30,8 +30,7 @@
 </head>
 <body>
     <button class="button" onclick="window.location.href = '../index.html';"><span>Accueil</span></button>
-    <audio controls src=$voiceline>Audio aléatoire</audio>
-    <?php echo $voiceline ?>
+    <audio controls src="<?php echo($voiceline); ?>">Audio aléatoire</audio>
 </body>
 </body>
 </html>
