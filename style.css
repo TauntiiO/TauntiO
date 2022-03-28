@@ -12,13 +12,13 @@ header {
   position: absolute; 
   top: 0; 
   width: 100%;
-  padding-top: 10px;
+  padding-top: 1%;
 }
 
 main {
   height: 100%; 
   width: 100%;
-  padding-top: 100px;
+  padding-top: 10%;
 }
 
 footer {
@@ -39,9 +39,10 @@ footer {
   border: none;
   color: #222222;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2em;
   padding: 20px;
   width: 200px;
+  height: 100px;
   transition: all 0.5s;
   cursor: pointer;
   margin : auto;
@@ -56,16 +57,14 @@ footer {
 }
 
 .button span:after {
-  content: '\00bb';
   position: absolute;
+  font-size: 1.5em;
   opacity: 0;
-  top: 0;
-  right: -20px;
   transition: 0.5s;
 }
 
 .button:hover span {
-  padding-right: 25px;
+  font-size: 1.5em;
 }
 
 .button:hover span:after {

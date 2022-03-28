@@ -52,9 +52,10 @@ a {
     border: none;
     color: #222222;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2em;
     padding: 20px;
     width: 200px;
+    height: 100px;
     transition: all 0.5s;
     cursor: pointer;
     margin : auto;
@@ -69,16 +70,14 @@ a {
   }
   
   .button span:after {
-    content: '\00bb';
     position: absolute;
+    font-size: 1.5em;
     opacity: 0;
-    top: 0;
-    right: -20px;
     transition: 0.5s;
   }
   
   .button:hover span {
-    padding-right: 25px;
+    font-size: 1.5em;
   }
   
   .button:hover span:after {
