@@ -19,6 +19,11 @@
   $voiceline = $dossier.'/'.$premier;
 ?>
 
+<script>
+  var voiceline = '<?PHP echo $voiceline?>';
+  var audio = new Audio(voiceline); 
+  audio.play(); 
+</Script>
 
 <html lang="fr">
 <head>
@@ -33,8 +38,7 @@
     <button class="button" onclick="window.location.href = '../index.html';"><span>Accueil</span></button>
   </header>
   <main>
-    <button class="button" onclick="window.location.href = 'index.php';"><span>Changer</span></button>
-    <audio controls src="<?php echo($voiceline); ?>">Audio aléatoire</audio>
+    <button class="button" onclick="window.location.href = 'index.php';"><span>Change</span></button>
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a>
