@@ -16,9 +16,10 @@ header {
 }
 
 main {
+  position: relative;
   height: 100%; 
   width: 100%;
-  padding-top: 10%;
+  top: 40%;
 }
 
 footer {

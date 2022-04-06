@@ -20,9 +20,16 @@
 ?>
 
 <script>
-  var voiceline = '<?PHP echo $voiceline?>';
-  var audio = new Audio(voiceline); 
-  audio.play(); 
+  var dossier = '<?PHP echo $dossier?>';
+  var tabfile = <?PHP echo json_encode($tabfile); ?>;
+
+
+  function newVoiceline() {
+    var premier = tabfile.shift();
+    var voiceline = dossier + '/' + premier;
+    var audio = new Audio(voiceline); 
+    audio.play(); 
+  }
 </Script>
 
 <html lang="fr">
@@ -38,7 +45,7 @@
     <button class="button" onclick="window.location.href = '../index.html';"><span>Accueil</span></button>
   </header>
   <main>
-    <button class="button" onclick="window.location.href = 'index.php';"><span>Change</span></button>
+    <button class="button" onclick="newVoiceline()"><span>Change</span></button>
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a>
