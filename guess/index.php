@@ -1,5 +1,5 @@
 <?php
-    $dossier='../sounds';
+    $dossier='sounds/';
 
     $list = opendir($dossier);
   
@@ -16,7 +16,7 @@
   
   // premier élément du tableau
   $premier = array_shift($tabfile);
-  $voiceline = $dossier.'/'.$premier;
+  $voiceline = $dossier.$premier;
 ?>
 
 <script>
