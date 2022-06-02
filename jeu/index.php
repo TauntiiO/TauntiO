@@ -42,7 +42,7 @@
 </head>
 <body>
   <header>
-    <button class="button" onclick="window.location.href = '../index.html';"><span>Accueil</span></button>
+    <button class="button" onclick="window.location.href = '../index.html';"><span>Home</span></button>
   </header>
   <main>
     <button class="button" onclick="newVoiceline()"><span>Change</span></button>
@@ -52,6 +52,5 @@
         <a href="https://twitter.com/TauntiO">Twitter</a>
         <a href="https://github.com/TauntiiO">GitHub</a>
     </footer>
-</body>
 </body>
 </html>
