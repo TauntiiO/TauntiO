@@ -1,2 +1,2 @@
 # tauntio.com
-Un repo pour mon projet de site qui réunirait tous mes projets perso
+A repository for my website project that would bring together all my personal projects

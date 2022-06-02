@@ -11,26 +11,10 @@
     }
     closedir($list);
   
-  //mélange du tableau
     shuffle($tabfile);
-  
-  // premier élément du tableau
-  $premier = array_shift($tabfile);
-  $voiceline = $dossier.$premier;
 ?>
 
-<script>
-  var dossier = '<?PHP echo $dossier?>';
-  var tabfile = <?PHP echo json_encode($tabfile); ?>;
 
-
-  function newVoiceline() {
-    var premier = tabfile.shift();
-    var voiceline = dossier + '/' + premier;
-    var audio = new Audio(voiceline); 
-    audio.play(); 
-  }
-</Script>
 
 <html lang="fr">
 <head>
@@ -54,3 +38,18 @@
     </footer>
 </body>
 </html>
+
+
+<script>
+  var dossier = '<?PHP echo $dossier?>';
+  var tabfile = <?PHP echo json_encode($tabfile); ?>;
+
+
+  function newVoiceline() {
+    var premier = tabfile.shift();
+    var voiceline = dossier + premier;
+    var audio = new Audio(voiceline); 
+    audio.play();
+  }
+
+</Script>
