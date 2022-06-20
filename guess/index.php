@@ -10,11 +10,45 @@
     ($fichier != "." && $fichier != ".." && $fichier != ".htaccess")? $tabfile[] = $fichier : '' ;
     }
     closedir($list);
-  
-    shuffle($tabfile);
 ?>
 
+<script>
 
+  let dossier;
+  let tabsounds;
+  let element;
+  let premier;
+  let voiceline;
+  let audio;
+
+  function randomArrayShuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+  function newVoiceline() {
+    premier = tabsounds.shift();
+    voiceline = dossier + premier;
+    audio = new Audio(voiceline); 
+    audio.play();
+  }
+
+  function startGame() {
+    dossier = '<?PHP echo $dossier?>';
+    tabsounds = <?PHP echo json_encode($tabfile); ?>;
+    randomArrayShuffle(tabsounds);
+    
+    newVoiceline();
+  }
+
+</Script>
 
 <html lang="fr">
 <head>
@@ -29,6 +63,8 @@
     <button class="button" onclick="window.location.href = '../index.html';"><span>Home</span></button>
   </header>
   <main>
+    <button class="button" id="start" onclick="startGame()"><span>Start</span></button>
+    <h1 class="centre"> - </h1>
     <button class="button" onclick="newVoiceline()"><span>Change</span></button>
   </main>
   <footer class="centre">
@@ -40,16 +76,3 @@
 </html>
 
 
-<script>
-  var dossier = '<?PHP echo $dossier?>';
-  var tabfile = <?PHP echo json_encode($tabfile); ?>;
-
-
-  function newVoiceline() {
-    var premier = tabfile.shift();
-    var voiceline = dossier + premier;
-    var audio = new Audio(voiceline); 
-    audio.play();
-  }
-
-</Script>
