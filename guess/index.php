@@ -21,29 +21,36 @@
   let voiceline;
   let audio;
 
-  function randomArrayShuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
+  function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
   }
+
+  return array;
+}
 
   function newVoiceline() {
     premier = tabsounds.shift();
     voiceline = dossier + premier;
     audio = new Audio(voiceline); 
+    audio.volume=0.3;
     audio.play();
   }
 
   function startGame() {
     dossier = '<?PHP echo $dossier?>';
     tabsounds = <?PHP echo json_encode($tabfile); ?>;
-    randomArrayShuffle(tabsounds);
+    shuffle(tabsounds);
     
     newVoiceline();
   }
@@ -60,12 +67,12 @@
 </head>
 <body>
   <header>
-    <button class="button" onclick="window.location.href = '../index.html';"><span>Home</span></button>
+    <button class="button" onclick="window.location.href = '../index.html';"><span>HOME</span></button>
   </header>
   <main>
-    <button class="button" id="start" onclick="startGame()"><span>Start</span></button>
+    <button class="button" id="start" onclick="startGame()"><span>START</span></button>
     <h1 class="centre"> - </h1>
-    <button class="button" onclick="newVoiceline()"><span>Change</span></button>
+    <button class="button" onclick="newVoiceline()"><span>NEXT</span></button>
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a>
