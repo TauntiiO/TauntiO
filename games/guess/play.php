@@ -21,12 +21,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>TauntiO</title>
 </head>
 <body>
   <header>
-    <button class="button" onclick="window.location.href = '../index.html';"><span>HOME</span></button>
+    <button class="button" onclick="window.location.href = '../mainGamesMenu.html';"><span>GAMES</span></button>
   </header>
   <main>
     <button class="button" id="start" onclick="startGame()"><span>START</span></button>
