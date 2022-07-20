@@ -12,10 +12,6 @@
     closedir($list);
 ?>
 
-<script type="text/javascript">var folder = "<?= $folder ?>";</script>
-<script type="text/javascript">var tabsounds = <?PHP echo json_encode($tabfile)?>;</script>
-<script type="text/javascript" src="scripts.js"></script>
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +28,8 @@
     <button class="button" id="start" onclick="startGame()"><span>START</span></button>
     <h1 class="centre"> - </h1>
     <button class="button" onclick="newVoiceline()"><span>NEXT</span></button>
-    <input type="text" id="try" name="try" required minlength="1" maxlength="20" size="25" spellcheck="false">
+    <input type="text" id="try" name="try" required minlength="1" maxlength="20" size="0.25%" spellcheck="false">
+    <button class="button" accesskey="enter" onclick="verify()"><span>SUBMIT</span></button>
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a>
@@ -41,5 +38,10 @@
     </footer>
 </body>
 </html>
+
+<script type="text/javascript">var folder = "<?= $folder ?>";</script>
+<script type="text/javascript">var tabsounds = <?PHP echo json_encode($tabfile)?>;</script>
+<script type="text/javascript" src="scripts.js"></script>
+
 
 

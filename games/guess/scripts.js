@@ -34,3 +34,13 @@ function startGame() {
 
     newVoiceline();
 }
+
+function verify() {
+    var input = document.getElementById('try');
+    if(input.value.indexOf(premier)!==-1) {
+        window.alert(GOOD);
+    }
+    else {
+        window.alert(WRONG);
+    }
+}

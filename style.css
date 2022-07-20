@@ -13,6 +13,7 @@ header {
   position: absolute; 
   top: 0; 
   width: 100%;
+  height: 100%;
   padding-top: 1%;
 }
 
@@ -20,7 +21,7 @@ main {
   position: relative;
   height: 100%; 
   width: 100%;
-  top: 40%;
+  top: 20%;
 }
 
 footer {
@@ -42,9 +43,9 @@ footer {
   color: #222222;
   text-align: center;
   font-size: 1.5rem;
-  padding: 20px;
+  padding: 0.5%;
   width: 200px;
-  height: 100px;
+  height: 10%;
   transition: all 0.3s;
   cursor: pointer;
   margin : auto;
