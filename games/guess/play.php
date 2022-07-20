@@ -25,13 +25,14 @@
     <title>TauntiO</title>
 </head>
 <body>
-  <header>
+  <header class="centre">
     <button class="button" onclick="window.location.href = '../mainGamesMenu.html';"><span>GAMES</span></button>
   </header>
-  <main>
+  <main class="centre">
     <button class="button" id="start" onclick="startGame()"><span>START</span></button>
     <h1 class="centre"> - </h1>
     <button class="button" onclick="newVoiceline()"><span>NEXT</span></button>
+    <input type="text" id="try" name="try" required minlength="1" maxlength="20" size="25" spellcheck="false">
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a>
