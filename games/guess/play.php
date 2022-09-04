@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../../style.css">
     <title>TauntiO</title>
 </head>
-<body>
+<body class="riftoBG">
   <header class="centre">
     <button class="button" onclick="window.location.href = '../mainGamesMenu.html';"><span>GAMES</span></button>
   </header>
