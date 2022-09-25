@@ -26,7 +26,6 @@
   </header>
   <main class="centre">
     <button class="button" id="start" onclick="startGame()"><span>START</span></button>
-    <h1 class="centre"> - </h1>
     <button class="button" onclick="newVoiceline()"><span>NEXT</span></button>
     <input type="text" id="try" name="try" required minlength="1" maxlength="20" size="0.25%" spellcheck="false">
     <button class="button" accesskey="enter" onclick="verify()"><span>SUBMIT</span></button>
