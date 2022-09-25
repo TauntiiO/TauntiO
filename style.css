@@ -127,6 +127,34 @@ footer {
   width: 100%;
 }
 
+input#submit {
+  display: block;
+  border-radius: 4px;
+  background-color: #888888;
+  border: none;
+  color: #222222;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5%;
+  width: 200px;
+  height: 10%;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin : 10px auto 10px auto;
+}
+
+input#submit:hover {
+  color: #444444;
+}
+
+input#submit:not(:hover) {
+  color: #222222;
+}
+
+input#submit:active {
+  font-size: 1rem;
+}
+
 
 
 

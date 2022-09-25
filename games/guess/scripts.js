@@ -36,11 +36,10 @@ function startGame() {
 }
 
 function verify() {
-    var input = document.getElementById('try');
-    if(input.value.indexOf(premier)!==-1) {
-        window.alert(GOOD);
+    if(document.getElementById("try").value+".mp3"!==premier) {
+       alert("GOOD");
     }
     else {
-        window.alert(WRONG);
+        alert("WRONG");
     }
 }

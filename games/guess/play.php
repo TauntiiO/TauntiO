@@ -25,10 +25,12 @@
     <button class="button" onclick="window.location.href = '../mainGamesMenu.html';"><span>GAMES</span></button>
   </header>
   <main class="centre">
-    <button class="button" id="start" onclick="startGame()"><span>START</span></button>
-    <button class="button" onclick="newVoiceline()"><span>NEXT</span></button>
-    <input type="text" id="try" name="try" required minlength="1" maxlength="20" size="0.25%" spellcheck="false">
-    <button class="button" accesskey="enter" onclick="verify()"><span>SUBMIT</span></button>
+    <button class="button" id="start" onclick="startGame();"><span>START</span></button>
+    <button class="button" onclick="newVoiceline();"><span>NEXT</span></button>
+    <form method="POST">
+      <input type="text" id="try" name="try" required minlength="1" maxlength="20" size="0.25%" spellcheck="false">
+      <input id="submit" type="submit" name="submit" value="SUBMIT" onclick="verify();">
+    </form>
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a>
