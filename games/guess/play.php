@@ -27,10 +27,11 @@
   <main class="centre">
     <button class="button" id="start" onclick="startGame();"><span>START</span></button>
     <button class="button" onclick="newVoiceline();"><span>NEXT</span></button>
-    <form method="POST">
+    <form>
       <input type="text" id="try" name="try" autocomplete="off" required minlength="1" maxlength="20" size="0.25%" spellcheck="false">
       <input id="submit" type="submit" name="submit" value="SUBMIT" onclick="verify();">
     </form>
+    <p id="pAnswer">Submit your guess</p>
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a>

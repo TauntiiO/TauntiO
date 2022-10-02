@@ -37,9 +37,9 @@ function startGame() {
 
 function verify() {
     if(document.getElementById("try").value+".mp3"==premier) {
-       alert("GOOD");
+        document.getElementById('pAnswer').innerHTML = "GOOD";
     }
     else {
-        alert("WRONG");
+        document.getElementById('pAnswer').innerHTML = "WRONG";
     }
 }
