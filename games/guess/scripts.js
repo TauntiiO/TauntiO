@@ -36,7 +36,7 @@ function startGame() {
 }
 
 function verify() {
-    if(document.getElementById("try").value+".mp3"!==premier) {
+    if(document.getElementById("try").value+".mp3"==premier) {
        alert("GOOD");
     }
     else {
