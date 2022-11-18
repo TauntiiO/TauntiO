@@ -38,8 +38,10 @@ function startGame() {
 function verify() {
     if(document.getElementById("try").value+".mp3"==premier) {
         document.getElementById('pAnswer').innerHTML = "GOOD";
+        return false;
     }
     else {
         document.getElementById('pAnswer').innerHTML = "WRONG";
+        return false;
     }
 }
