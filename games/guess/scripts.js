@@ -30,7 +30,7 @@ function newVoiceline() {
 
 function startGame() {
     shuffle(tabsounds);
-
+    document.getElementById("next").style.visibility = 'visible';
     newVoiceline();
 }
 

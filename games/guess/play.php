@@ -26,7 +26,7 @@
   </header>
   <main class="centre">
     <button class="button" id="start" onclick="startGame();"><span>START</span></button>
-    <button class="button" onclick="newVoiceline();"><span>NEXT</span></button>
+    <button class="button" id="next" style="visibility:hidden ;" onclick="newVoiceline();"><span>NEXT</span></button>
     <input type="text" id="try" name="try" autocomplete="off" required minlength="1" maxlength="20" size="0.25%" spellcheck="false">
     <button class="button" id="submit" onclick="verify();"><span>SUBMIT</span></button>
     <p id="pAnswer">Submit your guess</p>
