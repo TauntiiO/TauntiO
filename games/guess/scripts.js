@@ -6,14 +6,11 @@ let audio;
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
 
-    // While there remain elements to shuffle.
     while (currentIndex != 0) {
 
-        // Pick a remaining element.
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
 
-        // And swap it with the current element.
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
     }
@@ -22,6 +19,8 @@ function shuffle(array) {
 }
 
 function newVoiceline() {
+    document.getElementById("try").value = ""; 
+    document.getElementById('pAnswer').innerHTML = "Submit your guess";
     premier = tabsounds.shift();
     voiceline = folder + premier;
     audio = new Audio(voiceline); 
@@ -38,10 +37,9 @@ function startGame() {
 function verify() {
     if(document.getElementById("try").value+".mp3"==premier) {
         document.getElementById('pAnswer').innerHTML = "GOOD";
-        return false;
     }
     else {
         document.getElementById('pAnswer').innerHTML = "WRONG";
-        return false;
     }
+    document.getElementById("try").value = "";
 }
