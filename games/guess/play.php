@@ -3,11 +3,11 @@
 
     $list = opendir($folder);
   
-    $tabfile = array();
+    $tabSounds = array();
     
-    while ($fichier = readdir($list)) 
+    while ($file = readdir($list)) 
     {
-    ($fichier != "." && $fichier != ".." && $fichier != ".htaccess")? $tabfile[] = $fichier : '' ;
+    ($file == ".mp3")? $tabSounds[] = $file : '' ;
     }
     closedir($list);
 ?>
@@ -30,6 +30,7 @@
     <input type="text" id="try" name="try" autocomplete="off" required minlength="1" maxlength="20" size="0.25%" spellcheck="false">
     <button class="button" id="submit" onclick="verify();"><span>SUBMIT</span></button>
     <p id="pAnswer">Submit your guess</p>
+    <p>Score : <p id="pScore">0</p></p>
   </main>
   <footer class="centre">
         <a href="https://www.instagram.com/brr.titouan">Insta</a> 
@@ -40,7 +41,7 @@
 </html>
 
 <script type="text/javascript">var folder = "<?= $folder ?>";</script>
-<script type="text/javascript">var tabsounds = <?PHP echo json_encode($tabfile)?>;</script>
+<script type="text/javascript">var tabSounds = <?PHP echo json_encode($tabSounds)?>;</script>
 <script type="text/javascript" src="scripts.js"></script>
 
 
