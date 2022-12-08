@@ -3,7 +3,7 @@ let premier;
 let voiceline;
 let audio;
 let score = 0;
-let gameSounds;
+var gameSounds;
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -33,7 +33,10 @@ function newVoiceline() {
 function startGame() {
     score = 0;
     afficherScore();
+    console.log("startGame");
+    console.log(tabSounds);
     gameSounds = shuffle(tabSounds);
+    console.log(gameSounds);
     document.getElementById("next").style.visibility = 'visible';
     newVoiceline();
 }

@@ -7,7 +7,7 @@
     
     while ($file = readdir($list)) 
     {
-    ($file == ".mp3")? $tabSounds[] = $file : '' ;
+    (strpos($file, ".mp3"))? array_push($tabSounds,$file) : '' ;
     }
     closedir($list);
 ?>
@@ -40,9 +40,6 @@
 </body>
 </html>
 
-<script type="text/javascript">var folder = "<?= $folder ?>";</script>
-<script type="text/javascript">var tabSounds = <?PHP echo json_encode($tabSounds)?>;</script>
+<script type="text/javascript">var tabSounds = <?php echo json_encode($tabSounds);?>;</script>
+<script type="text/javascript">var folder = "<?php echo $folder; ?>";</script>
 <script type="text/javascript" src="scripts.js"></script>
-
-
-
