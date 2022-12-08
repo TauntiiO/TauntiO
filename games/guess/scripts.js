@@ -23,6 +23,9 @@ function shuffle(array) {
 function newVoiceline() {
     document.getElementById("try").value = ""; 
     document.getElementById('pAnswer').innerHTML = "Submit your guess";
+    if (gameSounds.length == 0) {
+        document.getElementById("next").style.visibility = 'hidden';
+    }
     premier = gameSounds.shift();
     voiceline = folder + premier;
     audio = new Audio(voiceline); 
